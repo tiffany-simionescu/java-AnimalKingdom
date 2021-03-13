@@ -88,5 +88,13 @@ public class Main {
 		List<Animal> namedIn1758List = filterAnimals(animalList, (a) -> a.getYear() == 1758);
 		namedIn1758List.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
 		namedIn1758List.forEach((a) -> System.out.println(a.getName() + " " + a.reproduce() + " " + a.move() + " " + a.breath() + " " + a.getYear()));
+
+		// STRETCH GOAL
+		System.out.println("\n*** Stretch Goal ***");
+
+		System.out.println("\n*** For the list of animals, list alphabetically those animals that are mammals ***");
+		List<Animal> mammalList = filterAnimals(animalList, (a) -> a instanceof Mammal);
+		mammalList.sort((m1, m2) -> m1.getName().compareToIgnoreCase(m2.getName()));
+		mammalList.forEach((m) -> System.out.println(m.getName() + " " + m.reproduce() + " " + m.move() + " " + m.breath() + " " + m.getYear()));
 	}	
 }
