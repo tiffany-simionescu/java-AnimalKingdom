@@ -7,7 +7,7 @@ abstract class Animal {
  // and year discovered regardless of classification.
 
  // Fields
-	protected int maxId = 0;
+	protected static int maxId;
 	protected int id;
 	protected int energy; // altered by moving and eating
 	protected String name;
@@ -15,8 +15,8 @@ abstract class Animal {
 
  // constructor
 	public Animal(String name, int year) {
-		maxId++;
 		id = maxId;
+		maxId++;
 		energy = 1;
 		this.name = name;
 		this.year = year;
